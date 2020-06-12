@@ -15,16 +15,16 @@ const Navbar = ({ title }) => {
                 crossButtonClassName={'bm-cross-button'}
                 crossClassName={'bm-cross'}
             >
-                <a id='home' className='menu-item' href='/'>
+                <a id='about' className='menu-item' href='/about'>
                     ABOUT US &amp; WHO WE ARE
                 </a>
-                <a id='about' className='menu-item' href='/expect'>
+                <a id='expect' className='menu-item' href='/expect'>
                     WHAT TO EXPECT
                 </a>
                 <a id='contact' className='menu-item' href='/programs'>
                     PROGRAMS
                 </a>
-                <a id='contact' className='menu-item' href='/team'>
+                <a id='team' className='menu-item' href='/team'>
                     MEET THE TEAM
                 </a>
             </Menu>
