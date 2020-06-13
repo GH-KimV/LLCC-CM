@@ -5,7 +5,7 @@ import { slide as Menu } from 'react-burger-menu';
 
 const Navbar = ({ title }) => {
     return (
-        <nav className='navbar bg-primary'>
+        <nav className='navbar navbar-primary'>
             <h1>{title}</h1>
             <Menu
                 isOpen={true}

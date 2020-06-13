@@ -2,6 +2,8 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import User from './components/users/User';
 import Navbar from './components/layout/navbar';
+import Footer from './components/layout/Footer';
+
 import Home from './components/pages/Home';
 import About from './components/pages/About';
 import Expectations from './components/pages/Expectations';
@@ -35,6 +37,7 @@ const App = () => {
                                 <Route component={NotFound} />
                             </Switch>
                         </div>
+                        <Footer />
                     </div>
                 </Router>
     );

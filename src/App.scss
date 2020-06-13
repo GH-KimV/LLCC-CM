@@ -2,8 +2,8 @@
 
 /* Global Styles */
 :root {
-  --primary-color: rgb(223, 215, 135);
-  --dark-color: #333333;
+  --yellow: rgb(223, 215, 135);
+  --text: #5A5A5A;
   --light-color: #f4f4f4;
   --danger-color: #dc3545;
   --success-color: #28a745;
@@ -22,6 +22,8 @@ body {
   background-color: #fff;
   color: #333;
 }
+
+
 
 a {
   color: var(--primary-color);
@@ -42,10 +44,33 @@ img {
 
 /* Utilities */
 .container {
-  max-width: 1100px;
-  margin: auto;
+  // min-width: 100%;
+  text-align: center;
+  margin: 1rem;
   overflow: hidden;
-  padding: 0 2rem;
+  padding: auto;
+  .teal{
+    background-color: #D2F8F5;
+    border: solid #BAEDEA;
+
+  }
+  .pink {
+    background-color: #FFA7A7;
+    border: solid #FF9C9C;
+  }
+  .text-box {
+    background-color: white;
+    margin: 2rem;
+    padding: 1rem;
+  }
+  .picture {
+    margin: 2rem;
+    background-color:white;
+  }
+}
+
+.row {
+  display: flex;
 }
 
 .sub-container {
@@ -364,6 +389,7 @@ table th {
   width: 100%;
   opacity: 0.9;
   margin-bottom: 1rem;
+  background-color: var(--yellow);
 }
 
 .navbar ul {
@@ -382,6 +408,24 @@ table th {
 
 .navbar .welcome span {
   margin-right: 0.6rem;
+}
+
+.footer {
+  background-color: var(--yellow);
+  position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   display: flex;
+   .address{
+    left: 0;
+    padding: 1rem
+   }
+   .volunteer{
+     position: absolute;
+    padding: 1rem;
+     right: 0;
+   }
 }
 
 /* Mobile Styles */
@@ -421,11 +465,9 @@ table th {
     text-align: left;
     h1{
       margin: 0;
-      color: black;
-
     }
     a{
-      color: black;
+      color:var(--text);
     }
   }
 
