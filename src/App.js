@@ -11,7 +11,7 @@ import Programs from './components/pages/Programs';
 import Team from './components/pages/Team';
 
 import NotFound from './components/pages/NotFound';
-import './App.scss';
+import './sass/style.scss';
 
 import GithubState from './context/github/GithubState';
 import AlertState from './context/alert/AlertState';
