@@ -47,24 +47,48 @@ img {
     text-align: center;
     overflow: hidden;
     padding: auto;
-    .teal {
+
+    .teal-container {
         width: 100%;
         background-color: $inner-teal;
         border: solid 1px $outer-teal;
+        display: grid;
+        grid-template-columns: auto;
+        grid-gap: 1rem;
     }
-    .pink {
+    .pink-container {
         width: 100%;
         background-color: $inner-pink;
         border: solid 1px $outer-pink;
     }
-    .text-box {
+    .text-box-pink {
         background-color: $light-color;
+        border: 1px solid $inner-pink;
+        margin: 2rem;
+        padding: 1rem;
+    }
+    .text-box-yellow {
+        background-color: $light-color;
+        border: 1px solid $inner-yellow;
+        margin: 2rem;
+        padding: 1rem;
+    }
+
+    .text-box-shadow-teal {
+        background-color: $light-color;
+        border: 1px solid $inner-teal;
+        box-shadow: 5px 5px $outer-teal;
         margin: 2rem;
         padding: 1rem;
     }
     .picture {
         margin: 2rem;
         background-color: $light-color;
+        background-image: url(../images/pingu.gif);
+        // background-repeat: no-repeat;
+        background-size: cover;
+        border: 1px solid $inner-pink;
+        box-shadow: 5px 5px $outer-pink;
     }
 }
 
@@ -79,13 +103,13 @@ img {
 }
 
 .action-btn {
-  color: $button-color;
-  font-size: .8rem;
-  border-radius: 2rem;
-  border-color: $button-color;
-  padding: .5rem 1.5rem;
-  margin: 1.8rem;
-  background-color: white;
+    color: $button-color;
+    font-size: 0.8rem;
+    border-radius: 2rem;
+    border-color: $button-color;
+    padding: 0.5rem 1.5rem;
+    margin: 1.8rem;
+    background-color: white;
 }
 
 /* Text Styles*/
