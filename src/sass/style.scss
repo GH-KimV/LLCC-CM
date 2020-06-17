@@ -49,6 +49,7 @@ img {
     padding: auto;
 
     .teal-container {
+        margin: 0;
         width: 100%;
         background-color: $inner-teal;
         border: solid 1px $outer-teal;
@@ -57,6 +58,7 @@ img {
         grid-gap: 1rem;
     }
     .pink-container {
+        margin: 0;
         width: 100%;
         background-color: $inner-pink;
         border: solid 1px $outer-pink;
@@ -81,6 +83,13 @@ img {
         margin: 2rem;
         padding: 1rem;
     }
+    .text-box-shadow-pink {
+      background-color: $light-color;
+      border: 1px solid $inner-pink;
+      box-shadow: 5px 5px $outer-pink;
+      margin: 2rem;
+      padding: 1rem;
+  }
     .picture {
         margin: 2rem;
         background-color: $light-color;
