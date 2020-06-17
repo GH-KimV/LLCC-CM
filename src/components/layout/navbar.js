@@ -5,8 +5,8 @@ import { slide as Menu } from 'react-burger-menu';
 
 const Navbar = ({ title }) => {
     return (
-        <nav className='navbar bg-primary'>
-            <h1>{title}</h1>
+        <nav className='navbar navbar-primary'>
+            <h1><Link to="/">{title}</Link></h1>
             <Menu
                 isOpen={true}
                 burgerButtonClassName={'burger-btn'}
@@ -16,7 +16,7 @@ const Navbar = ({ title }) => {
                 crossClassName={'bm-cross'}
             >
                 <a id='about' className='menu-item' href='/about'>
-                    ABOUT US &amp; WHO WE ARE
+                    ABOUT US
                 </a>
                 <a id='expect' className='menu-item' href='/expect'>
                     WHAT TO EXPECT
