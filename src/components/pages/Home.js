@@ -3,6 +3,7 @@ import React from 'react'
 const Home = () => {
     return (
         <>
+        <div></div>
         <div className='container teal'>
             <div className="row">
                 <div className="picture">Picture</div>
@@ -12,6 +13,9 @@ const Home = () => {
             <div className='text-box'>Sunday @11:00 AM</div>
                 <div className="picture">Picture</div>
             </div>
+        </div>
+        <div>
+            <button className="action-btn">WHAT TO EXPECT</button>
         </div>
         <div className="container pink">
             <div className="row">
