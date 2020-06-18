@@ -19,29 +19,25 @@ import AlertState from './context/alert/AlertState';
 
 const App = () => {
     return (
-                <Router>
-                    <div className='App'>
-                        <Navbar />
-                        <div className='container'>
-                            <Hero />
-                            <Switch>
-                                <Route exact path='/' component={Home} />
-                                <Route exact path='/about' component={About} />
+        <Router>
+            <div className='App'>
+            <Navbar />
+                <div className='container'>
+                    <Hero />
+                    <Switch>
+                        <Route exact path='/' component={Home} />
+                        <Route exact path='/about' component={About} />
 
-                                <Route exact path='/expect' component={Expectations} />
-                                <Route exact path='/programs' component={Programs} />
-                                <Route exact path='/team' component={Team} />
-                                <Route
-                                    exact
-                                    path='/user/:login'
-                                    component={User}
-                                />
-                                <Route component={NotFound} />
-                            </Switch>
-                        </div>
-                        <Footer />
-                    </div>
-                </Router>
+                        <Route exact path='/expect' component={Expectations} />
+                        <Route exact path='/programs' component={Programs} />
+                        <Route exact path='/team' component={Team} />
+                        <Route exact path='/user/:login' component={User} />
+                        <Route component={NotFound} />
+                    </Switch>
+                </div>
+                <Footer />
+            </div>
+        </Router>
     );
 };
 
