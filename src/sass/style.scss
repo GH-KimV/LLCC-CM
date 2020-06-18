@@ -44,36 +44,57 @@ img {
 
 /* Utilities */
 .container {
+    padding: 4rem 0;
     text-align: center;
     overflow: hidden;
-    padding: auto;
-
+    .white-container {
+      margin: 0;
+      width: 100%;
+      background-color: $light-color;
+      padding: 1rem;
+  }
     .teal-container {
         margin: 0;
         width: 100%;
         background-color: $inner-teal;
         border: solid 1px $outer-teal;
-        display: grid;
-        grid-template-columns: auto;
-        grid-gap: 1rem;
+        padding: 1rem;
     }
     .pink-container {
         margin: 0;
         width: 100%;
         background-color: $inner-pink;
         border: solid 1px $outer-pink;
+        padding: 1rem;
+        h3 {
+            color: white;
+        }
+        .action-btn {
+            color: $light-color;
+            font-size: 0.8rem;
+            border-radius: 2rem;
+            border-color: $light-color;
+            box-shadow: $light-color;
+            background-color: transparent;
+        }
     }
     .text-box-pink {
         background-color: $light-color;
         border: 1px solid $inner-pink;
-        margin: 2rem;
-        padding: 1rem;
+        margin: 1rem;
+        padding: auto;
     }
     .text-box-yellow {
         background-color: $light-color;
         border: 1px solid $inner-yellow;
-        margin: 2rem;
-        padding: 1rem;
+        margin: 1rem;
+        padding: auto;
+    }
+    .text-box-teal {
+        background-color: $light-color;
+        border: 1px solid $inner-teal;
+        margin: 1rem;
+        padding: auto;
     }
 
     .text-box-shadow-teal {
@@ -84,20 +105,56 @@ img {
         padding: 1rem;
     }
     .text-box-shadow-pink {
-      background-color: $light-color;
-      border: 1px solid $inner-pink;
-      box-shadow: 5px 5px $outer-pink;
-      margin: 2rem;
-      padding: 1rem;
-  }
+        background-color: $light-color;
+        border: 1px solid $inner-pink;
+        box-shadow: 5px 5px $outer-pink;
+        margin: 2rem;
+        padding: 1rem;
+    }
     .picture {
         margin: 2rem;
         background-color: $light-color;
         background-image: url(../images/pingu.gif);
-        // background-repeat: no-repeat;
         background-size: cover;
         border: 1px solid $inner-pink;
         box-shadow: 5px 5px $outer-pink;
+    }
+    .rnd-pic-yellow {
+        margin: 1rem;
+        background-color: $light-color;
+        background-image: url(../images/pingu.gif);
+        background-size: cover;
+        border: 1px solid $inner-yellow;
+        border-radius: 50%;
+        box-shadow: 5px 5px $outer-yellow;
+        height: 4rem;
+        width: 4rem;
+    }
+    .rnd-pic-teal {
+        margin: 1rem;
+        background-color: $light-color;
+        background-image: url(../images/pingu.gif);
+        background-size: cover;
+        border: 1px solid $inner-teal;
+        border-radius: 50%;
+        box-shadow: 5px 5px $outer-teal;
+        height: 4rem;
+        width: 4rem;
+    }
+    .rnd-pic-pink {
+        margin: 1rem;
+        background-color: $light-color;
+        background-image: url(../images/pingu.gif);
+        background-size: cover;
+        border: 1px solid $inner-pink;
+        border-radius: 50%;
+        box-shadow: 5px 5px $outer-pink;
+        height: 4rem;
+        width: 4rem;
+    }
+    .p-container {
+        text-align: left;
+        padding: 1rem;
     }
 }
 
@@ -457,7 +514,6 @@ table th {
     bottom: 0;
     width: 100%;
     display: flex;
-    z-index: -1;
     .address {
         left: 0;
         padding: 1rem;
@@ -501,6 +557,8 @@ table th {
 
     /* Navbar */
     .navbar {
+        position: fixed;
+        margin-bottom: 1rem;
         display: flex;
         text-align: left;
         h1 {
@@ -527,17 +585,25 @@ table th {
   Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
   */
     .bm-menu-wrap {
+      // position: absolute;
+      // right: 0;
+      // top: 0;
+      // position: relative;
+      // right: 0;
+      // top: 0;
     }
 
     /* General sidebar styles */
     .bm-menu {
         position: absolute;
-        background: white;
-        height: 100%;
+        background: $light-color ;
+        border: 1px solid;
+        height: 88% !important;
         overflow: auto;
         padding: 2em 0.5em 0;
         font-size: 1.05em;
-        right: 0;
+        right: -2rem;
+        top: -2rem;
     }
 
     /* Morph shape necessary with bubble or elastic */
@@ -561,11 +627,11 @@ table th {
     }
 
     .burger-btn {
-        position: fixed;
+        position: absolute;
         width: 24px;
         height: 20px;
-        right: 16px;
-        top: 20px;
+        right: 10px;
+        top: 15px;
     }
 
     .burger-bars {
