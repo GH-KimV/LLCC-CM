@@ -16,9 +16,6 @@ const Burger = () => {
       <Link id="expect" className="menu-item" to="/expect">
         What to Expect
       </Link>
-      <Link id="expect" className="menu-item" to="/programs">
-        Programs
-      </Link>
       <Link id="expect" className="menu-item" to="/team">
         Team
       </Link>
