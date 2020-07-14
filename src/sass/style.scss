@@ -1,7 +1,7 @@
 /*Sass shortcut imports*/
-@import './themes/colors';
-@import './themes/fonts';
-@import './themes/mixins';
+@import "./themes/colors";
+@import "./themes/fonts";
+@import "./themes/mixins";
 
 /* Global Styles */
 * {
@@ -48,11 +48,11 @@ img {
     text-align: center;
     overflow: hidden;
     .white-container {
-      margin: 0;
-      width: 100%;
-      background-color: $light-color;
-      padding: 1rem;
-  }
+        margin: 0;
+        width: 100%;
+        background-color: $light-color;
+        padding: 1rem;
+    }
     .teal-container {
         margin: 0;
         width: 100%;
@@ -100,14 +100,14 @@ img {
     .text-box-shadow-teal {
         background-color: $light-color;
         border: 1px solid $inner-teal;
-        box-shadow: 5px 5px $outer-teal;
+        box-shadow: 5px 5px $inner-teal;
         margin: 2rem;
         padding: 1rem;
     }
     .text-box-shadow-pink {
         background-color: $light-color;
         border: 1px solid $inner-pink;
-        box-shadow: 5px 5px $outer-pink;
+        box-shadow: 5px 5px $inner-pink;
         margin: 2rem;
         padding: 1rem;
     }
@@ -117,7 +117,7 @@ img {
         background-image: url(../images/pingu.gif);
         background-size: cover;
         border: 1px solid $inner-pink;
-        box-shadow: 5px 5px $outer-pink;
+        box-shadow: 5px 5px $inner-pink;
     }
     .rnd-pic-yellow {
         margin: 1rem;
@@ -126,7 +126,7 @@ img {
         background-size: cover;
         border: 1px solid $inner-yellow;
         border-radius: 50%;
-        box-shadow: 5px 5px $outer-yellow;
+        box-shadow: 5px 5px $inner-yellow;
         height: 4rem;
         width: 4rem;
     }
@@ -137,7 +137,7 @@ img {
         background-size: cover;
         border: 1px solid $inner-teal;
         border-radius: 50%;
-        box-shadow: 5px 5px $outer-teal;
+        box-shadow: 5px 5px $inner-teal;
         height: 4rem;
         width: 4rem;
     }
@@ -148,7 +148,7 @@ img {
         background-size: cover;
         border: 1px solid $inner-pink;
         border-radius: 50%;
-        box-shadow: 5px 5px $outer-pink;
+        box-shadow: 5px 5px $inner-pink;
         height: 4rem;
         width: 4rem;
     }
@@ -450,10 +450,10 @@ input {
     color: #888;
 }
 
-input[type='text'],
-input[type='email'],
-input[type='password'],
-input[type='date'],
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
 select,
 textarea {
     display: block;
@@ -463,7 +463,7 @@ textarea {
     border: 1px solid #ccc;
 }
 
-input[type='submit'],
+input[type="submit"],
 button {
     font: inherit;
 }
@@ -486,7 +486,6 @@ table th {
     padding: 0.7rem 2rem;
     z-index: 1;
     width: 100%;
-    opacity: 0.9;
     margin-bottom: 1rem;
     background-color: $inner-yellow;
     border: $outer-yellow 1px solid;
@@ -498,8 +497,6 @@ table th {
 
 .navbar a {
     color: #fff;
-    padding: 0.45rem;
-    margin: 0 0.25rem;
 }
 
 .navbar .welcome span {
@@ -568,16 +565,45 @@ table th {
             color: $text-color;
         }
     }
+    .navbar ul {
+        text-align: center;
+        justify-content: center;
+    }
+
+    /* Burger Menu */
+    /* Position and sizing of burger button */
+    .bm-burger-button {
+        position: fixed;
+        width: 1.5rem;
+        height: 1rem;
+        right: 2rem;
+        top: 1.3rem;
+    }
+
+    /* Color/shape of burger icon bars */
+    .bm-burger-bars {
+        background: #5a5a5a;
+        height: 2px !important;
+    }
+
+    /* Color/shape of burger icon bars on hover*/
+    .bm-burger-bars-hover {
+        background: #a90000;
+    }
 
     /* Position and sizing of clickable cross button */
     .bm-cross-button {
         height: 24px;
         width: 24px;
+        top: 25% !important;
+        right: 30% !important;
     }
 
     /* Color/shape of close button cross */
     .bm-cross {
         background: #bdc3c7;
+        height: 1.5rem !important;
+        width: .1rem !important;
     }
 
     /*
@@ -585,62 +611,45 @@ table th {
   Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
   */
     .bm-menu-wrap {
-      // position: absolute;
-      // right: 0;
-      // top: 0;
-      // position: relative;
-      // right: 0;
-      // top: 0;
+        position: fixed;
+        height: 100%;
     }
 
     /* General sidebar styles */
     .bm-menu {
-        position: absolute;
-        background: $light-color ;
-        border: 1px solid;
-        height: 88% !important;
-        overflow: auto;
-        padding: 2em 0.5em 0;
-        font-size: 1.05em;
-        right: -2rem;
-        top: -2rem;
+        background: white;
+        padding: 2.5em 1.5em 0;
+        font-size: 1.15em;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        z-index: 0;
+        width: inherit !important;
     }
 
     /* Morph shape necessary with bubble or elastic */
     .bm-morph-shape {
+        fill: white;
     }
 
     /* Wrapper for item list */
     .bm-item-list {
         color: #b8b7ad;
         padding: 0.8em;
+        display: flex;
+        height: 50% !important;
+        flex-direction: column;
+        justify-content: space-evenly;
+        overflow: hidden !important;
+        position: static !important;
     }
 
     /* Individual item */
     .bm-item {
         display: inline-block;
     }
-
     /* Styling of overlay */
     .bm-overlay {
-        display: none;
-    }
-
-    .burger-btn {
-        position: absolute;
-        width: 24px;
-        height: 20px;
-        right: 10px;
-        top: 15px;
-    }
-
-    .burger-bars {
-        background: $text-color;
-        height: 3px !important;
-    }
-
-    .navbar ul {
-        text-align: center;
-        justify-content: center;
+        background: rgba(255, 255, 255, 0.3) !important;
     }
 }
